@@ -57,13 +57,13 @@
       max-width: 1000px;
       margin: auto;
     }
-    .plans, .how-it-works {
+    .plans, .how-it-works, .folder-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
     }
-    .card {
+    .card, .folder-card {
       background-color: #1e1e1e;
       padding: 20px;
       border-radius: 10px;
@@ -72,15 +72,24 @@
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       animation: fadeInUp 1s ease forwards;
+      cursor: pointer;
     }
-    .card:hover {
+    .card:hover, .folder-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 0 15px rgba(255, 102, 0, 0.3);
+    }
+    .folder-card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
     }
     footer {
       font-size: 0.9rem;
     }
-
+    a.card {
+      text-decoration: none;
+      color: inherit;
+    }
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -102,6 +111,7 @@
       <a href="#">Home</a>
       <a href="#planos">Planos</a>
       <a href="#como-funciona">Como Funciona</a>
+      <a href="#folder">Folder</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
@@ -115,20 +125,46 @@
   <section id="planos">
     <h2>Planos</h2>
     <div class="plans">
-      <div class="card">
+      <a class="card" href="https://wa.me/5599981374366?text=Olá! Quero assinar o plano mensal de IPTV.">
         <h3>Mensal</h3>
         <p>R$ 30,00</p>
         <p>Acesso por 30 dias</p>
-      </div>
-      <div class="card">
+      </a>
+      <a class="card" href="https://wa.me/5599981374366?text=Olá! Quero assinar o plano trimestral de IPTV.">
         <h3>Trimestral</h3>
         <p>R$ 80,00</p>
         <p>Acesso por 90 dias</p>
-      </div>
-      <div class="card">
+      </a>
+      <a class="card" href="https://wa.me/5599981374366?text=Olá! Quero assinar o plano anual de IPTV.">
         <h3>Anual</h3>
         <p>R$ 250,00</p>
         <p>Acesso por 1 ano completo</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="folder">
+    <h2>Por que escolher nossa IPTV?</h2>
+    <div class="folder-grid">
+      <div class="folder-card">
+        <img src="https://img.icons8.com/fluency/96/tv.png" alt="Canais" />
+        <h4>+10.000 Canais</h4>
+        <p>Esportes, filmes, séries, variedades e muito mais.</p>
+      </div>
+      <div class="folder-card">
+        <img src="https://img.icons8.com/color/96/movie-projector.png" alt="Filmes" />
+        <h4>Filmes e Séries Atualizados</h4>
+        <p>Lançamentos e clássicos sempre disponíveis.</p>
+      </div>
+      <div class="folder-card">
+        <img src="https://img.icons8.com/fluency/96/4k.png" alt="HD" />
+        <h4>Qualidade HD / 4K</h4>
+        <p>Imagem nítida e som de qualidade para sua diversão.</p>
+      </div>
+      <div class="folder-card">
+        <img src="https://img.icons8.com/fluency/96/technical-support.png" alt="Suporte" />
+        <h4>Suporte Rápido</h4>
+        <p>Atendimento via WhatsApp em poucos minutos.</p>
       </div>
     </div>
   </section>
