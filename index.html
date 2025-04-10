@@ -53,13 +53,23 @@
       background-color: #e65c00;
     }
     section {
-      <div class="hero">
-  <img src="https://images.unsplash.com/photo-1565375792-63497e93e050" alt="Banner IPTV" style="width: 100%; height: auto;"/>
+    <div class="hero">
+  <img src="https://images.unsplash.com/photo-1565375792-63497e93e050" alt="Banner IPTV" style="width: 100%; height: auto; transition: transform 0.3s ease;">
   <h1>Assista tudo, sem limites</h1>
   <p>+10.000 canais, filmes e séries. Qualidade HD e sem travamentos.</p>
   <button class="cta-button">Assine Agora</button>
 </div>
-</div>
+
+<style>
+.hero img:hover {
+  transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+}
+</style>
+<style>
+.hero img:hover {
+  transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+}
+</style>
     }
     .plans, .how-it-works, .folder-grid {
       display: flex;
